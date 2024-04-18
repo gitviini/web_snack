@@ -1,6 +1,6 @@
 ## WEB SNAKE
 
-by: (@v.ii.n.i)[https://github.com/gitviini/]
+by: [@v.ii.n.i](https://github.com/gitviini/)
 
     Famous game snake. Made with objective of learn JS and Web Server.
 
