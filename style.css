@@ -4,6 +4,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #345;
     box-sizing: border-box;
+    transition: 0.2s;
 }
 
 html, body{
@@ -14,27 +15,65 @@ html, body{
 
 body{
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    flex-flow: row;
     overflow: hidden;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
 }
 
 #container{
     display: block;
-    height: 100%;
-    width: 100%;
-    border: 2px solid #345;
+    height: 400px;
+    width: 400px;
+    min-height: 400px;
+    min-width: 400px;
+    outline: 2px solid #345;
+    overflow: hidden;
 }
 
-.player{
-    position: relative;
+.player, #apple{
+    position: absolute;
     display: flex;
     width: 20px;
     height: 20px;
     flex-flow: column;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
+    transition: 0s;
+}
+
+#apple{
+    background-color: #933;
+}
+
+#info{
+    display: flex;
+    width: 30%;
+    height: 400px;
+    flex-flow: column;
+    outline: 2px solid #345;
+}
+#score_list{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 5px;
+    gap: 5px;
+}
+
+.score{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #789;
+    color: #fff;
+    text-indent: 5px;
+    padding: 5px;
+    font-style: italic;
 }
 
 .name{
@@ -52,4 +91,22 @@ body{
     width: 20px;
     height: 20px;
     background-color: #3d3;
+}
+
+#new_player{
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+    padding: 0px 20px;
+    font-family: monospace;
+    outline: 2px solid #525;
+    border: none;
+    background-color: #929;
+    color: #fff;
+    font-size: 15px;
+}
+
+#new_player:hover{
+    padding: 20px 20px;
+    background-color: #525;
 }
