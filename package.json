@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "web_snake",
+  "description": "by: [@v.ii.n.i](https://github.com/gitviini/)",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "game.js",
+  "author": "",
+  "license": "ISC"
+}
