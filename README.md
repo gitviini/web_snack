@@ -7,3 +7,7 @@ by: [@v.ii.n.i](https://github.com/gitviini/)
     *web version
 
 <img src='img.png' width='100%' alt='image example'>
+
+NEW FEATURES :
+* Score list
+* Preview online player

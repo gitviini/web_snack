@@ -1,6 +1,7 @@
 class View{
-    constructor(Container=Element,Apple=Element){
+    constructor(Container=Element,Apple=Element,Container_score=Element){
         this.container = Container
+        this.container_score = Container_score
         this.apple = Apple
         this.instance_list = []
     }
@@ -38,5 +39,15 @@ class View{
 
     generate_apple(position){
         this.apple.style.inset = `${position[0]}px ${position[1]}px`
+    }
+
+    generate_score_list(id_list=[],players=[]){
+        this.container_score.innerHTML = ''
+        id_list.forEach(id=>{
+            let score = document.createElement('li')
+            score.setAttribute('class','score')
+            score.innerText = `${players[id].score} : ${players[id].name}`
+            this.container_score.appendChild(score)
+        })
     }
 }

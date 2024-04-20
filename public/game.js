@@ -10,7 +10,6 @@ class Game{
 */      this.instances = {}
         this.players = {}
         this.id_list = []
-        this.score_list = []
         this.apple_position = []
         this.size = [400,400]
 

@@ -6,7 +6,7 @@ const score_list = document.querySelector('#score_list')
 const button = document.querySelector('#new_player')
 
 const player = new Player()
-const view = new View(container,apple)
+const view = new View(container,apple,score_list)
 
 let a = 0
 
@@ -15,8 +15,8 @@ socket.on('geral_infos',({id_list,players,apple_position})=>{
     id_list.forEach(id=>{
         view.new_player(id,players[id])
     })
+    view.generate_score_list(id_list,players)
     button.onclick = () =>{
-        
         player.question(socket) == true ? button.style.visibility = 'hidden' : {}
     }
 })
@@ -24,6 +24,7 @@ socket.on('geral_infos',({id_list,players,apple_position})=>{
 socket.on('send_infos',({id_list,players})=>{
     view.gerenate_party(id_list,players)
     player.position_load()
+    view.generate_score_list(id_list,players)
     socket.emit('load_infos',({'position':player.position}))
 })
 

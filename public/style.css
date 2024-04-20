@@ -91,6 +91,7 @@ body{
     width: 20px;
     height: 20px;
     background-color: #3d3;
+    opacity: 0.8;
 }
 
 #new_player{

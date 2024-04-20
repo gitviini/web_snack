@@ -38,6 +38,6 @@ setInterval(() => {
     game.verify_position() == true ? io.emit('warning_generate_apple',({'apple_position':game.apple_position})) : {}
 }, (game.tick));
 
-server.listen(PORT, ()=>{
-    console.log(':.',PORT)
+server.listen(PORT, '0.0.0.0', ()=>{
+    console.log(':.',server.address())
 })
